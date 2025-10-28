@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Empresa | Soluções Digitais Profissionais</title>
+    
+    <style>
+        :root {
+            --primary-color: #172a3a; /* Azul escuro/Marinho */
+            --secondary-color: #007bff; /* Azul vibrante para destaque */
+            --text-color: #333;
+            --light-bg: #f7f9fc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* ------------------ Header e Navegação ------------------ */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--white);
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* ------------------ Seções e Layout Geral ------------------ */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        /* ------------------ Seção Herói (Destaque Inicial) ------------------ */
+        #hero {
+            background-color: var(--white);
+            padding: 100px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* ------------------ Seção Serviços ------------------ */
+        #servicos {
+            background-color: var(--light-bg);
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .servico-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .servico-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .servico-item h3 {
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            margin-top: 15px;
+        }
+
+        /* ------------------ Seção Contato ------------------ */
+        #contato {
+            background-color: var(--white);
+        }
+
+        #contato p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contato-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        /* ------------------ Rodapé ------------------ */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* ------------------ Responsividade (Mobile) ------------------ */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            .servicos-grid {
+                grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="#hero" class="logo">PROSITE</a>
+            <nav>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Elevando Sua Presença Digital</h1>
+            <p>Somos especialistas em soluções web sob medida, design moderno e otimização de performance para o seu negócio.</p>
+            <a href="#contato" class="cta-button">Fale Conosco Agora</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Quem Somos</h2>
+            <p>A PROSITE nasceu da paixão por tecnologia e resultados. Nossa missão é transformar ideias em realidade digital, oferecendo sites rápidos, responsivos e fáceis de usar que realmente geram valor para o cliente.</p>
+            <p>Trabalhamos com transparência, comunicação clara e foco total em alcançar os objetivos do seu projeto, seja ele um pequeno portfólio ou uma plataforma complexa.</p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços Chave</h2>
+            <div class="servicos-grid">
+                
+                <div class="servico-item">
+                    <h3>Design UX/UI</h3>
+                    <p>Criação de interfaces intuitivas e agradáveis que garantem a melhor experiência para o usuário.</p>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Implementação de sites robustos, desde o front-end visual até o back-end de alta performance.</p>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Consultoria SEO</h3>
+                    <p>Estratégias para otimizar seu site e garantir que ele apareça nas primeiras posições dos mecanismos de busca.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Pronto para iniciar seu próximo projeto? Envie-nos uma mensagem e vamos discutir suas necessidades.</p>
+            
+            <div class="contato-info">
+                <p>E-mail: <a href="mailto:contato@prosite.com">contato@prosite.com</a></p>
+                <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+            </div>
+
+            <a href="mailto:contato@prosite.com?subject=Pedido%20de%20Orçamento%20Profissional" class="cta-button">Enviar E-mail</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>PROSITE &copy; 2025. Todos os direitos reservados. Feito com paixão pelo digital.</p>
+    </footer>
+
+    </body>
+</html>
